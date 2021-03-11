@@ -27,6 +27,12 @@ console.log(typeof lastName);
 let fullName = firstName + " " + lastName;
 console.log(fullName);
 
+// template literal - backtick
+
+let fullName1 = `${firstName} ${lastName}`
+console.log("template literal :" + fullName1);
+console.log(`template literal with print :  ${fullName1}`);
+
 let statement = "Arthur's computer";
 console.log(statement);
 
