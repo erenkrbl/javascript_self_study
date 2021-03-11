@@ -1,5 +1,10 @@
 console.log("Hello World");
 
+// Data types (two types of data)
+// Primitive and Reference 
+// Primitive data type: Number, String, Boolean, Undefined, Null, Symbol
+// Reference data type:Object
+
 // type number
 
 let number = 50;
@@ -36,7 +41,24 @@ console.log(`template literal with print :  ${fullName1}`);
 let statement = "Arthur's computer";
 console.log(statement);
 
- // escape expressions
+ // escape expressions backslash
 let statement1 = 'Arthur\'s computer';
 console.log(statement1);
 
+//type boolean
+
+let primeNumber = true;
+console.log("Data type value : " +  primeNumber + " data type :" + typeof primeNumber);
+console.log(`Data type value : ${primeNumber} data type : ${typeof primeNumber}`);
+
+// type undefined
+
+let color;
+console.log(color);
+console.log(typeof color);
+
+// type null
+
+let age = null;
+console.log(age);
+console.log("value : " + age + "data type : " + typeof age)
