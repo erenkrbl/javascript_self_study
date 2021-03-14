@@ -8,3 +8,24 @@ for ( let i = 0; i < 5; i++) {
 for (let i = 0, j = 0; (i + j) < 20; i = i + 5, j = j + 2) {
     console.log("i value : " + i + "," + " j value : " + j)
 }
+
+// While
+
+for (let j = 5; j < 15; j++) {
+    console.log("For loops Hello");
+}
+
+let number = 5;
+
+while ( number < 15) {
+    console.log("number");
+    number++;
+}
+
+// do while
+
+let age = 20;
+do {
+    console.log("Do while hello");
+    age++;
+} while (age < 30);
