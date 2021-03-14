@@ -7,4 +7,19 @@ if (myAge < yourAge) {
     console.log("We are the same age");
 } else {
     console.log("I am bigger than you");
-} 
+}
+
+// ternary literals
+
+let a = 5, b = 30, c = 0;
+
+if (a > b) {
+    c = a + b;
+    console.log("C value : " + c);
+} else {
+    c = a - b;
+    console.log("C value : " + c);
+}
+
+c = (a > b) ? (a + b) : (a - b);
+console.log("C value : " + c);
