@@ -29,3 +29,31 @@ do {
     console.log("Do while hello");
     age++;
 } while (age < 30);
+
+// break, continue, return
+
+for (i = 0; i < 50; i++) {
+    if (i==12) {
+        break;
+    }
+    console.log("break used")
+}
+
+
+for ( let i = 10; i < 20; i++) {
+    if ( i == 16){
+        continue;
+    }
+    console.log("Contunie used" + i)
+}
+
+
+// for içinde return kullanımı sadece fonksiyon içinde ise olur.
+// aksi takdirde illegaal return stament hatası alınır    
+   
+// for (let i = 0; i < 10; i++) {
+//     if (i == 5) {
+//         //return;
+//     }
+//     console.log("Return used" + i)
+// }
