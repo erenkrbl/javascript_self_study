@@ -151,8 +151,12 @@ const infoWrite = function(...args) {
     console.log(`My name is ${this.fname}, my age ${this.age}, my scholl ${this.scholl}`);
     console.log(`My favorite colors ${args}`);
 }
-
+/*
 infoWrite.call(elvin);
 //infoWrite.call(harold);
 infoWrite.call(elvin, 'red', 'blue');
 infoWrite.apply(elvin, ['green', 'yellow', 'black']);
+*/
+
+const saying = infoWrite.bind(harold, ['blue', 'yellow', 'white']);
+saying();
