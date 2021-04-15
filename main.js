@@ -1,4 +1,4 @@
-// function scope
+/* // function scope
 
 // function a() {
 //     var name = 'Eric';
@@ -66,3 +66,15 @@ b();
 var test = 'test';
 let test1 = 'test1';
 const test2 = 'test2';
+*/
+// Immediately-invoked Function Expression (IIFE) 
+// Hemen çağrılan İşlev İfadesi
+
+(function() {
+    let name = 'John';
+    const age = 32;
+
+    console.log("Hello, I am " + name + " and my age " + age);
+})();
+
+// console.log(age); // ReferenceError: age is not defined
