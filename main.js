@@ -70,7 +70,7 @@ const test2 = 'test2';
 // Immediately-invoked Function Expression (IIFE) 
 // Hemen çağrılan İşlev İfadesi
 
-(function() {
+/*(function() {
     let name = 'John';
     const age = 32;
 
@@ -78,3 +78,43 @@ const test2 = 'test2';
 })();
 
 // console.log(age); // ReferenceError: age is not defined
+*/
+
+// this
+// 1 Implicit binding==> fonksiyonun çağrıldığı noktanın solunda ne var sa this onu temsil eder
+
+
+// object literal
+const eric = {
+    fname : 'Eric',
+    age : 39,
+    sayName : function() {
+        console.log(this);
+        console.log(this.fname);
+    },
+    sayAge : function () {
+        console.log(this);
+        console.log(this.age);
+    }
+
+}
+
+//eric.sayName();
+//eric.sayAge();
+
+const henry = {
+    fname : 'Henry',
+    age : 33,
+    sayName : function() {
+        console.log(this);
+        console.log(this.fname);
+    },
+    sayAge : function () {
+        console.log(this);
+        console.log(this.age);
+    }
+
+}
+
+eric.sayName();
+henry.sayAge();
