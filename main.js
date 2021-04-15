@@ -116,5 +116,17 @@ const henry = {
 
 }
 
-eric.sayName();
-henry.sayAge();
+//eric.sayName();
+// henry.sayAge();
+
+// window binding
+
+/**
+ * const sayMyName = function () {
+ * console.log(this)
+ * console.log(this.name)
+ * }
+ */
+// Both same
+const sayMyName = eric.sayName;
+sayMyName();
