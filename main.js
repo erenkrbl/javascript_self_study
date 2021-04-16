@@ -133,7 +133,7 @@ const henry = {
 
 // 2 explicit bindings
 // call, bind, apply
-
+/*
 const elvin = {
     fname : 'Elvin',
     age : 32,
@@ -151,12 +151,11 @@ const infoWrite = function(...args) {
     console.log(`My name is ${this.fname}, my age ${this.age}, my scholl ${this.scholl}`);
     console.log(`My favorite colors ${args}`);
 }
-/*
+
 infoWrite.call(elvin);
 //infoWrite.call(harold);
 infoWrite.call(elvin, 'red', 'blue');
 infoWrite.apply(elvin, ['green', 'yellow', 'black']);
-*/
 
 const saying = infoWrite.bind(harold, ['blue', 'yellow', 'white']);
 saying();
@@ -177,3 +176,49 @@ const honda = new Car('red', 'civic');
 honda.information();
 
 console.log(this);
+*/
+
+// 1 eric.method();
+// 2 method.bind(harold);
+// 3 new
+// window
+
+
+// arrow function
+
+// function funcfirst(){
+//     console.log(this);
+// }
+
+// funcfirst();
+
+// const number = 15;
+
+// const funcsecond = () => {
+//     console.log(this);
+//     //console.log(number);
+// }
+
+// funcsecond();
+
+// var fname = 'terry';
+
+const terry = {
+    fname : 'terry',
+    sayNane : () => {
+        console.log(this);
+        console.log(this.fname);
+    }
+}
+
+terry.sayNane();
+
+const herry = {
+    fname : 'terry',
+    sayNane () {
+        console.log(this);
+        console.log(this.fname);
+    }
+}
+
+herry.sayNane();
