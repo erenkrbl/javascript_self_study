@@ -160,3 +160,20 @@ infoWrite.apply(elvin, ['green', 'yellow', 'black']);
 
 const saying = infoWrite.bind(harold, ['blue', 'yellow', 'white']);
 saying();
+
+// new binding
+
+const Car = function(color, model) {
+    this.color = 'My car ' + color;
+    this.model = model;
+    this.information = function(){
+        console.log(this.color);
+        console.log(color);
+    }
+
+}
+
+const honda = new Car('red', 'civic');
+honda.information();
+
+console.log(this);
