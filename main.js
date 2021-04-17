@@ -238,9 +238,16 @@ const scholl = {
         this.id.forEach(function(id, index){
             console.log(id);
             console.log(this);
-        });
+        }.bind(this));
+    },
+    studentNumberGive() {
+        setTimeout(() => {
+            console.log(this);
+            console.log('Student number total : ' + this.studentName.length);
+        }, 2000);
     }
 }
 
 // scholl.studentWrite();
 scholl.idWrite();
+scholl.studentNumberGive();
