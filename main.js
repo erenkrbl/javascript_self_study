@@ -254,20 +254,52 @@ const scholl = {
 
 // AddEventListener
 
-const titles1 = document.querySelector('h1');
-const titles2 = document.querySelector('h2');
-const titles3 = document.querySelector('h3');
+// const titles1 = document.querySelector('h1');
+// const titles2 = document.querySelector('h2');
+// const titles3 = document.querySelector('h3');
 
-titles1.addEventListener('click', function(e) {
-    console.log(this);
-});
+// titles1.addEventListener('click', function(e) {
+//     console.log(this);
+// });
 
-titles2.addEventListener('click', titleClick);
+// titles2.addEventListener('click', titleClick);
 
-const number = 30;
-function titleClick (e) {
-    console.log(e.target);
-    console.log(this);
-    console.log(number);
+// const number = 30;
+// function titleClick (e) {
+//     console.log(e.target);
+//     console.log(this);
+//     console.log(number);
+
+// }
+
+class Screns {
+    constructor() {
+        this.titles1 = document.querySelector('h1');
+        this.titles2 = document.querySelector('h2');
+        this.number = 20;
+        this.titles3 = document.querySelector('h3');
+
+        this.titles1.addEventListener('click', function() {
+            console.log(this);
+        });
+        this.titles2.addEventListener('click', this.title2Click.bind(this));
+
+        this.titles3.addEventListener('click', () => {
+            this.title3Click();
+        });
+    }
+    title2Click() {
+        console.log('Worked');
+        console.log(this);
+        console.log(this.number);
+    }
+    title3Click() {
+        console.log('Worked');
+        console.log(this);
+        console.log(this.number);
+    }
+
 
 }
+
+const screens = new Screns();
