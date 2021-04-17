@@ -202,7 +202,7 @@ console.log(this);
 // funcsecond();
 
 // var fname = 'terry';
-
+/*
 const terry = {
     fname : 'terry',
     sayNane : () => {
@@ -222,3 +222,25 @@ const herry = {
 }
 
 herry.sayNane();
+*/
+
+const scholl = {
+    studentName : ['Eric', 'Harold', 'John'],
+    id : [1234, 2345, 3456],
+    studentWrite () {
+        const that = this;
+        this.studentName.forEach(function (sname, index) {
+            console.log(that);
+            console.log(sname, that.id[index]);
+        });
+    },
+    idWrite(){
+        this.id.forEach(function(id, index){
+            console.log(id);
+            console.log(this);
+        });
+    }
+}
+
+// scholl.studentWrite();
+scholl.idWrite();
