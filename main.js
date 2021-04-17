@@ -249,5 +249,25 @@ const scholl = {
 }
 
 // scholl.studentWrite();
-scholl.idWrite();
-scholl.studentNumberGive();
+// scholl.idWrite();
+// scholl.studentNumberGive();
+
+// AddEventListener
+
+const titles1 = document.querySelector('h1');
+const titles2 = document.querySelector('h2');
+const titles3 = document.querySelector('h3');
+
+titles1.addEventListener('click', function(e) {
+    console.log(this);
+});
+
+titles2.addEventListener('click', titleClick);
+
+const number = 30;
+function titleClick (e) {
+    console.log(e.target);
+    console.log(this);
+    console.log(number);
+
+}
