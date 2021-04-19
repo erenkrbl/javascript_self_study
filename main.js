@@ -340,29 +340,31 @@ result();
 */
 
 // CLOSURE EXAMPLE 1
+/*
 
-// const numberSum = () => {
-//     console.log("Function start");
+const numberSum = () => {
+    console.log("Function start");
 
-//     const a = 20, b = 30;
+    const a = 20, b = 30;
 
-//     const sumNum = () => {
-//         console.log("Total " + (a + b));
-//     }
+    const sumNum = () => {
+        console.log("Total " + (a + b));
+    }
 
-//     setTimeout(sumNum, 6000);
-//     //return sumNum;
-//     console.log("Function end");
-// }
+    setTimeout(sumNum, 6000);
+    //return sumNum;
+    console.log("Function end");
+}
 
-// numberSum();
+numberSum();
 
-// const result = numberSum();
-// result();
+const result = numberSum();
+result();
+*/
 
 // CLOSURE EXAMPLE 2
 
-
+/*
 const counterFunction = () => {
     console.log("Function start");
     let count = 0;
@@ -382,3 +384,27 @@ const counterFunction = () => {
 }
 
 counterFunction();
+*/
+
+// CLOSURE EXAMPLE 3
+const calculator = (num1, num2) => {
+    function numberSum () {
+        console.log('Sum of numbers: ', (num1 + num2));
+    }
+
+    function numberMultiply () {
+        console.log("Multiplication of numbers: " + (num1 * num2));
+    }
+
+    return {
+        numberSum,
+        numberMultiply
+    }
+
+}
+
+const app = calculator(7, 8);
+app.numberSum();
+app.numberMultiply();
+
+console.log(app);
