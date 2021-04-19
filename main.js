@@ -341,21 +341,44 @@ result();
 
 // CLOSURE EXAMPLE 1
 
-const numberSum = () => {
-    console.log("Function start");
+// const numberSum = () => {
+//     console.log("Function start");
 
-    const a = 20, b = 30;
+//     const a = 20, b = 30;
 
-    const sumNum = () => {
-        console.log("Total " + (a + b));
-    }
+//     const sumNum = () => {
+//         console.log("Total " + (a + b));
+//     }
 
-    setTimeout(sumNum, 6000);
-    //return sumNum;
-    console.log("Function end");
-}
+//     setTimeout(sumNum, 6000);
+//     //return sumNum;
+//     console.log("Function end");
+// }
 
-numberSum();
+// numberSum();
 
 // const result = numberSum();
 // result();
+
+// CLOSURE EXAMPLE 2
+
+
+const counterFunction = () => {
+    console.log("Function start");
+    let count = 0;
+    const h1 = document.querySelector('h1');
+    const h2 = document.querySelector('h2');
+
+    h1.addEventListener('click', ()=>{
+        count++;
+        console.log('INCREASE: ' + count);
+
+    });
+    h2.addEventListener('click', ()=>{
+        count--;
+        console.log('DECREASE: ' + count);
+    });
+    console.log("Function end");
+}
+
+counterFunction();
