@@ -387,6 +387,7 @@ counterFunction();
 */
 
 // CLOSURE EXAMPLE 3
+/*
 const calculator = (num1, num2) => {
     function numberSum () {
         console.log('Sum of numbers: ', (num1 + num2));
@@ -408,3 +409,26 @@ app.numberSum();
 app.numberMultiply();
 
 console.log(app);
+*/
+
+// CLOSURE EXAMPLE 4
+
+function stopWatchApp () {
+    let startTime = Date.now();
+    console.log('Start time: ' + startTime);
+
+    function longTake () {
+        let lastTime = Date.now() - startTime;
+        console.log('Elapsed time : ' + lastTime + ' milliseconds');
+    }
+
+    return longTake;
+}
+
+const stopWatch = stopWatchApp();
+
+for (i = 0; i < 50000; i++) {
+    let temporary = Math.random() * 5000;
+}
+
+stopWatch();
