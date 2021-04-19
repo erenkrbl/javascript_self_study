@@ -342,7 +342,7 @@ result();
 // CLOSURE EXAMPLE 1
 
 const numberSum = () => {
-    console.log("function start");
+    console.log("Function start");
 
     const a = 20, b = 30;
 
@@ -350,11 +350,12 @@ const numberSum = () => {
         console.log("Total " + (a + b));
     }
 
-    return sumNum;
+    setTimeout(sumNum, 6000);
+    //return sumNum;
     console.log("Function end");
 }
 
-numberSum()();
+numberSum();
 
 // const result = numberSum();
 // result();
