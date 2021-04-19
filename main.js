@@ -271,7 +271,7 @@ const scholl = {
 //     console.log(number);
 
 // }
-
+/*
 class Screns {
     constructor() {
         this.titles1 = document.querySelector('h1');
@@ -303,3 +303,58 @@ class Screns {
 }
 
 const screens = new Screns();
+*/
+
+// CLOSURE
+
+// closure kendi parent functionu çalıştırıp sonlansa bile parent scope'a
+// erişebilen fonksiyondur.
+//
+//Bir fonksiyonda bulunan local değişkenlerin fonksiyon
+//retun edildikten sonra bile saklanmasıdır
+
+/*
+
+const multiplyWithTwo = number => number * 2;
+
+const r1 = multiplyWithTwo(5);
+const r2 = multiplyWithTwo(9);
+
+console.log(r1, r2)
+
+const out = () => {
+    let count = 0;
+    const increase = () => {
+        count++;
+        console.log(count);
+    }
+    return increase;
+}
+
+const result = out();
+const result2 = result();
+
+result();
+result();
+result();
+*/
+
+// CLOSURE EXAMPLE 1
+
+const numberSum = () => {
+    console.log("function start");
+
+    const a = 20, b = 30;
+
+    const sumNum = () => {
+        console.log("Total " + (a + b));
+    }
+
+    return sumNum;
+    console.log("Function end");
+}
+
+numberSum()();
+
+// const result = numberSum();
+// result();
