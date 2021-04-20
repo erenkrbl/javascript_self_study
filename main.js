@@ -85,6 +85,7 @@ const test2 = 'test2';
 
 
 // object literal
+/*
 const eric = {
     fname : 'Eric',
     age : 39,
@@ -115,6 +116,7 @@ const henry = {
     }
 
 }
+*/
 
 //eric.sayName();
 // henry.sayAge();
@@ -223,7 +225,7 @@ const herry = {
 
 herry.sayNane();
 */
-
+/*
 const scholl = {
     studentName : ['Eric', 'Harold', 'John'],
     id : [1234, 2345, 3456],
@@ -247,7 +249,7 @@ const scholl = {
         }, 2000);
     }
 }
-
+*/
 // scholl.studentWrite();
 // scholl.idWrite();
 // scholl.studentNumberGive();
@@ -412,7 +414,7 @@ console.log(app);
 */
 
 // CLOSURE EXAMPLE 4
-
+/*
 function stopWatchApp () {
     let startTime = Date.now();
     console.log('Start time: ' + startTime);
@@ -432,3 +434,25 @@ for (i = 0; i < 50000; i++) {
 }
 
 stopWatch();
+*/
+// 1- memory 2- Encapsulation
+// EXAMPLE 5
+
+function studentsFind (id) {
+    const studentArray = new Array(10).fill({studentName: '', id: 0})
+        .map(function(std, index) {
+            return {
+                studentName : 'Student ' + index,
+                id: index, 
+            }
+        });
+
+    console.log('Array created and fill');
+    return studentArray[id];    
+}
+
+console.log(studentsFind(5));
+console.log(studentsFind(6));
+console.log(studentsFind(3));
+console.log(studentsFind(1));
+console.log(studentsFind(8));
