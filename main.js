@@ -451,8 +451,31 @@ function studentsFind (id) {
     return studentArray[id];    
 }
 
-console.log(studentsFind(5));
-console.log(studentsFind(6));
-console.log(studentsFind(3));
-console.log(studentsFind(1));
-console.log(studentsFind(8));
+// console.log(studentsFind(5));
+// console.log(studentsFind(6));
+// console.log(studentsFind(3));
+// console.log(studentsFind(1));
+// console.log(studentsFind(8));
+
+function studentAffairs() {
+    const studentArray = new Array(10).fill({studentName: '', id: 0})
+        .map(function(std, index) {
+            return {
+                studentName : 'Student ' + index,
+                id: index, 
+            }
+        });
+    
+    console.log('Array created and fill');
+
+    function studentsFind(id) {
+        return studentArray[id];
+    }
+    return studentsFind;
+}
+
+const find = studentAffairs();
+console.log(find(5));
+console.log(find(6));
+console.log(find(4));
+console.log(find(8));
