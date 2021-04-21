@@ -483,7 +483,7 @@ console.log(find(8));
 */
 
 // 2- Encapsulation
-
+/*
 function studentAffairs() {
     const studentArray = new Array(10).fill({studentName: '', id: 0})
         .map(function(std, index) {
@@ -516,3 +516,27 @@ const affairs = studentAffairs();
 console.log(affairs.find(5));
 console.log(affairs.update(6));
 console.log(affairs.delete(1));
+*/
+
+let db;
+
+function runToOnce () {
+    let counter = 0;
+
+    return function(){
+        if (counter > 0) {
+            console.log('No action, db connection has already been made');
+            return;
+        } else {
+            counter++;
+            db = 'Connection';
+            console.log('Connection db');
+        }
+    }
+}
+
+const initialized = runToOnce();
+initialized();
+initialized();
+initialized();
+initialized();
