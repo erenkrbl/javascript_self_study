@@ -457,6 +457,7 @@ function studentsFind (id) {
 // console.log(studentsFind(1));
 // console.log(studentsFind(8));
 
+/*
 function studentAffairs() {
     const studentArray = new Array(10).fill({studentName: '', id: 0})
         .map(function(std, index) {
@@ -479,3 +480,39 @@ console.log(find(5));
 console.log(find(6));
 console.log(find(4));
 console.log(find(8));
+*/
+
+// 2- Encapsulation
+
+function studentAffairs() {
+    const studentArray = new Array(10).fill({studentName: '', id: 0})
+        .map(function(std, index) {
+            return {
+                studentName : 'Student ' + index,
+                id: index, 
+            }
+        });
+    
+    console.log('Array created and fill');
+
+    function studentsFind(id) {
+        return studentArray[id];
+    }
+    function studentsUpdate(id) {
+        return studentArray[id];
+    }
+    function studentsDelete(id) {
+        return studentArray[id];
+    }
+    return {
+        find :studentsFind,
+        update : studentsUpdate,
+        delete : studentsDelete,
+    
+    };
+}
+
+const affairs = studentAffairs();
+console.log(affairs.find(5));
+console.log(affairs.update(6));
+console.log(affairs.delete(1));
