@@ -44,7 +44,7 @@ for ( let i = 10; i < 20; i++) {
     if ( i == 16){
         continue;
     }
-    console.log("Contunie used" + i)
+    //console.log("Contunie used" + i)
 }
 
 
@@ -59,20 +59,20 @@ for ( let i = 10; i < 20; i++) {
 // }
 
 for(let i = 0; i < 5; i++) {
-    console.log("i  : ", i);
+    //console.log("i  : ", i);
 }
 
 let sum = 0;
 for(let i = 0; i <= 5; i++) {
     sum += i;
 }
-console.log("sum : ", sum);
+//console.log("sum : ", sum);
 
 let multiply = 1;
 for(let i = 1; i <= 5; i++) {
     multiply *= i;
 }
-console.log("multiply: ", multiply);
+//console.log("multiply: ", multiply);
 
 
 let myString = 'Clarusway';
@@ -84,6 +84,23 @@ for (i= 0; i < myString.length; i++) {
         result += myString[i] 
     }
 }
-console.log(result);
+//console.log(result);
+
+let a = 0;
+
+while (a < 5) {
+    a++;
+    console.log("a : " + a);
+}
+
+{
+    let i = 0;
+    let sum = 0;
+    while(i < 5){
+        i++;
+        sum += i;
+    }
+    console.log("sum : ", sum);
+}
 
 
