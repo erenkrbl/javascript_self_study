@@ -57,3 +57,21 @@ for ( let i = 10; i < 20; i++) {
 //     }
 //     console.log("Return used" + i)
 // }
+
+for(let i = 0; i < 5; i++) {
+    console.log("i  : ", i);
+}
+
+let sum = 0;
+for(let i = 0; i <= 5; i++) {
+    sum += i;
+}
+console.log("sum : ", sum);
+
+let multiply = 1;
+for(let i = 1; i <= 5; i++) {
+    multiply *= i;
+}
+console.log("multiply: ", multiply);
+
+
